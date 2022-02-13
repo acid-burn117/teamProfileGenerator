@@ -38,7 +38,32 @@ function createManager() {
 
 };
 function createIntern() {
-
+    inquire.prompt([
+        {
+            type: "input",
+            message: "Enter intern name.",
+            name: "nameInput"
+        },
+        {
+            type: "input",
+            message: "Enter intern ID number.",
+            name: "idInput"
+        },
+        {
+            type: "input",
+            message: "Enter intern email address.",
+            name: "emailInput"
+        },
+        {
+            type: "input",
+            message: "Enter interns school.",
+            name: "schoolInput"
+        },
+    ]).then(response => {
+        const newIntern = new intern (response.nameInput, response.idInput, response.emailInput, response.schoolInput);
+        newMembers.push(newIntern);
+        chooseMember();
+    })
 };
 function createEngineer() {
 

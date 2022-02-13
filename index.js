@@ -66,7 +66,32 @@ function createIntern() {
     })
 };
 function createEngineer() {
-
+    inquire.prompt([
+        {
+            type: "input",
+            message: "Enter engineers name.",
+            name: "nameInput"
+        },
+        {
+            type: "input",
+            message: "Enter engineers ID number.",
+            name: "idInput"
+        },
+        {
+            type: "input",
+            message: "Enter engineers email address.",
+            name: "emailInput"
+        },
+        {
+            type: "input",
+            message: "Enter engineers github.",
+            name: "githubInput"
+        },
+    ]).then(response => {
+        const newEngineer = new engineer(response.nameInput, response.idInput, response.emailInput, response.githubInput);
+        newMembers.push(newEngineer);
+        chooseMember();
+    })
 };
 function chooseMember() {
     inquire.prompt([

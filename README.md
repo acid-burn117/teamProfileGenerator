@@ -1,13 +1,14 @@
 # Team Profile Generator
 ![github License](https://img.shields.io/badge/license-MIT-blue.svg)
 ## description
-Terminal application that creates team profile. User can input information for one manager, as well as engineers and interns.  Input is displayed on a HTML page styed with CSS
+Terminal application that creates team profile. User can input information for one manager, as well as engineers and interns. Input is displayed on a HTML page styed with CSS
 ## Table of Conents
 * [Installation](#installation)
 * [Usage](#usage)
 *!
-* [Tests](#tests)
-*[Questions](*questions)
+* [Contribution](#contribution)
+* [Tests](*tests)
+* [Questions](*questions)
 
 ## Installation
 
@@ -26,14 +27,14 @@ must be ran in terminal, and initated with node index.js
   
 ## Contributing
 
-undefined
+All PR's must be approved
 
 ## Tests
 
 To run tests, run the following command:
 
 ```
-undefined
+npm test
 ```
 
 ## Questions

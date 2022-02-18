@@ -4,8 +4,11 @@ const manager = require('./lib/manager');
 const intern = require('./lib/intern');
 const pageTemplete = require('./src/pagetemplete');
 const fs = require('fs');
+const path= require('path')
+let teamMembers = [];
+const outputDirectory = path.resolve(__dirname, "dist")
+const outputPath = path.join(outputDirectory, "index.html")
 
-let newMembers = [];
 
 
 function createManager() {
@@ -32,7 +35,7 @@ function createManager() {
         },
     ]).then(response => {
         const newManager = new manager(response.nameInput, response.idInput, response.emailInput, response.officeInput);
-        newMembers.push(newManager);
+        teamMembers.push(newManager);
         chooseMember();
     })
 
@@ -61,7 +64,7 @@ function createIntern() {
         },
     ]).then(response => {
         const newIntern = new intern (response.nameInput, response.idInput, response.emailInput, response.schoolInput);
-        newMembers.push(newIntern);
+        teamMembers.push(newIntern);
         chooseMember();
     })
 };
@@ -89,7 +92,7 @@ function createEngineer() {
         },
     ]).then(response => {
         const newEngineer = new engineer(response.nameInput, response.idInput, response.emailInput, response.githubInput);
-        newMembers.push(newEngineer);
+        teamMembers.push(newEngineer);
         chooseMember();
     })
 };
@@ -111,5 +114,8 @@ function chooseMember() {
     }})
 };
 function teamBuilder() {
-
+  fs.writeFile(outputPath, pageTemplete(teamMembers), err =>{
+      err ? console.error(err) : console.log("Team Built!")
+  })
 };
+createManager();

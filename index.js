@@ -99,7 +99,7 @@ function createEngineer() {
 function chooseMember() {
     inquire.prompt([
         {
-            type: list,
+            type: "list",
             name: "member",
             message: "choose what member you want to add.",
             choices: ["Engineer", "Intern", 'None'],

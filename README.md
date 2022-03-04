@@ -39,5 +39,5 @@ npm test
 
 ## Questions
 
-If you have any questions about the repo, open an issue or contact me directly at osoriodouglas19@gmail.com. You can find more of my work at [undefined](https://github.com/undefined/).
+If you have any questions about the repo, open an issue or contact me directly at osoriodouglas19@gmail.com. You can find more of my work at [GitHub](https://github.com/acid-burn117/). Walkthrough video available at https://drive.google.com/file/d/1qRBbax1dKE5boAvir9zaVWq847qaVul8/view
 
